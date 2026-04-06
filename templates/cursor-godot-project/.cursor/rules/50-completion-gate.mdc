@@ -1,0 +1,22 @@
+---
+description: Completion gate for Godot work: require validation and review evidence before claiming success
+alwaysApply: true
+---
+
+# Completion Gate
+
+- Do not claim a Godot task is complete without fresh validation evidence.
+- Before final completion, check requested behavior, implemented scope, validation evidence, and open risks.
+- If the work is non-trivial, review for regressions and maintainability before declaring it done.
+- If validation is incomplete, say so clearly instead of implying success.
+
+# Required Checks
+
+- acceptance criteria status
+- validation steps actually run
+- high-risk file involvement
+- remaining assumptions or follow-ups
+
+# Main Session Ownership
+
+The main session owns final go/no-go decisions and shared-file integration.

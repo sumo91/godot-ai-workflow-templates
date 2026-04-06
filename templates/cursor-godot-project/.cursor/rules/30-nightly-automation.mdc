@@ -1,0 +1,33 @@
+---
+description: Apply when preparing or reviewing overnight Godot automation tasks
+alwaysApply: false
+---
+
+# Nightly Automation
+
+Overnight work must be task-file driven, not open-ended.
+
+Use explicit modes:
+
+- `safe`
+- `low-risk`
+- `task-packet`
+
+Before a nightly run, define:
+
+- Goal
+- Context
+- Allowed Files
+- Forbidden Files
+- Validation
+- Definition of Done
+
+Every nightly run should leave:
+
+- Outcome
+- Files Changed
+- Validation Performed
+- Open Risks
+- Suggested First Step For Tomorrow
+
+High-risk shared-file integration stays in the main session, not the nightly runner.

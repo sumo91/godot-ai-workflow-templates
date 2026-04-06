@@ -1,0 +1,22 @@
+---
+description: Session and thread boundaries for Godot orchestration, implementation, validation, and overnight handoff
+alwaysApply: true
+---
+
+# Session and Threading
+
+- Keep the main chat as the orchestrator for medium and large tasks.
+- Use separate threads or agent contexts for implementation, validation, and overnight handoff when that reduces context noise.
+- Open a new thread when the goal changes, the role changes, or high-risk files enter scope.
+- Continue a thread only when the role, file boundary, and task packet stay stable.
+
+# Default Thread Model
+
+- main orchestration thread
+- implementation thread for narrow, low-risk task packets
+- validation thread for evidence and acceptance checking
+- overnight review thread for next-day handoff
+
+# Safety Rule
+
+If shared-file integration is needed, return control to the main thread.

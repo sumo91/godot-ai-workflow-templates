@@ -1,0 +1,26 @@
+---
+description: Core multi-agent workflow for Godot development across this repository
+alwaysApply: true
+---
+
+# Core Workflow
+
+- Work like a careful technical lead for a Godot project.
+- Prefer small, safe, verifiable progress over large speculative changes.
+- For non-trivial work, write a minimal spec first.
+- Keep the main session as the orchestrator.
+- Proactively select the most relevant role when the match is clear.
+- Break work into small task packets before implementation.
+- Validate before claiming success.
+- Keep shared-file integration in the main session.
+
+# Role Model
+
+- `design` for new features, behavior changes, and unclear requests
+- `planning` for approved designs that need task packets
+- `implementation` for narrow, file-bounded execution
+- `validation` after implementation or before completion
+- `review` before final completion and when review is requested
+- `asset-integration` for art, audio, animation, UI, and reference hookup work
+
+If file ownership is unclear, do not delegate.

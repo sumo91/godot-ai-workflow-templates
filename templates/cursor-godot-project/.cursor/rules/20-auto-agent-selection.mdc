@@ -1,0 +1,18 @@
+---
+description: Auto-selection triggers for Godot workflow roles
+alwaysApply: true
+---
+
+# Automatic Role Selection
+
+When the role match is clear, proactively behave as the most relevant role instead of waiting for the user to name it.
+
+- New features, unclear requirements, or behavior changes -> act in `design` mode first
+- Approved design that needs task packets -> act in `planning` mode
+- Narrow, file-bounded execution -> act in `implementation` mode
+- After implementation or before claiming success -> act in `validation` mode
+- Before final completion, and whenever review is requested -> act in `review` mode
+- Asset hookup without gameplay logic changes -> act in `asset-integration` mode
+
+If the current role changes, say so clearly.
+If a task crosses into shared-file orchestration, return control to the main session.

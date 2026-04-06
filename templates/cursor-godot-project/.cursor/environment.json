@@ -1,0 +1,4 @@
+{
+  "install": "echo \"No install step configured yet. Update .cursor/environment.json for this repo before using Background Agents.\"",
+  "terminals": []
+}

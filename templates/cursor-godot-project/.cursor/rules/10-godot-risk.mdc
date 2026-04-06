@@ -1,0 +1,37 @@
+---
+description: Godot-specific risk model and file safety rules
+alwaysApply: true
+---
+
+# High-Risk Files
+
+Treat these as high-risk integration points:
+
+- `project.godot`
+- `autoload/*`
+- shared `.tscn`
+- core player scenes
+- core player movement and state scripts
+- shared resources referenced by many scenes
+
+# Parallelization Rules
+
+Safe to parallelize:
+
+- new independent scripts
+- independent UI components
+- test scenes
+- data resources
+- documentation
+- asset wiring that does not touch core gameplay logic
+
+Do not parallelize:
+
+- edits to the same `.tscn`
+- `project.godot`
+- shared `autoload` scripts
+- core player controller files
+- shared state or event-bus code
+- any work with unclear file ownership
+
+When unsure, keep execution serial.
