@@ -1,33 +1,47 @@
 # Godot AI Workflow Templates
 
-Reusable multi-agent workflow templates for Godot game development across:
+[中文 README](./README.zh-CN.md) | [Quickstart](./docs/quickstart/README.en.md)
 
-- Claude Code
-- Codex
-- Cursor
-- Trae
+Reusable multi-agent workflow templates for Godot development across Claude Code, Codex, Cursor, and Trae.
 
-This repository is designed to be downloaded and applied to your own game project.
+This repository helps you install a project-local AI workflow into your own Godot game project instead of relying on machine-bound personal setup.
 
 Repository URL:
 
 - `https://github.com/sumo91/godot-ai-workflow-templates`
 
-## What This Repository Contains
+## Why This Repository Exists
+
+- Bootstrap a practical multi-agent workflow for a new or existing Godot project
+- Keep workflow files inside the project so they can be shared across devices and teammates
+- Reuse one shared core while adapting to different AI coding tools
+- Support nightly task handoff, session organization, review loops, and smoke-test driven setup
+
+## What You Get
 
 - Shared workflow core
-- Platform-specific project starters
+- Platform-specific starter templates
 - Prompt and handoff templates
-- Installer scripts
+- PowerShell and bash installers
 - Smoke tests
 - Nightly workflow guidance
+- Session and thread organization guidance
+
+## Supported Platforms
+
+| Platform | Starter | Primary Guide |
+| --- | --- | --- |
+| Claude Code | `templates/claude-godot-project` | `docs/platforms/claude.zh-CN.md` |
+| Codex | `templates/codex-godot-project` | `docs/platforms/codex.zh-CN.md` |
+| Cursor | `templates/cursor-godot-project` | `docs/platforms/cursor.zh-CN.md` |
+| Trae | `templates/trae-godot-project` | `docs/platforms/trae.zh-CN.md` |
 
 ## Quick Start
 
 1. Pick your platform: `claude`, `codex`, `cursor`, or `trae`
-2. Run an installer
-3. Open your project with your chosen tool
-4. Run the matching smoke test
+2. Run the installer against your Godot project directory
+3. Open the project with your chosen tool
+4. Run the matching smoke test before real work
 
 PowerShell example:
 
@@ -41,16 +55,44 @@ Bash example:
 ./installers/bash/install-workflow.sh codex /path/to/MyGodotProject
 ```
 
-For Chinese quickstart docs:
+For step-by-step setup:
 
-- `docs/quickstart/README.zh-CN.md`
+- English: `docs/quickstart/README.en.md`
+- Chinese: `docs/quickstart/README.zh-CN.md`
 
-Platform-specific guides:
+## Repository Layout
 
-- `docs/platforms/claude.zh-CN.md`
-- `docs/platforms/codex.zh-CN.md`
-- `docs/platforms/cursor.zh-CN.md`
-- `docs/platforms/trae.zh-CN.md`
+- `core/` shared roles, prompts, and workflow logic
+- `templates/` project-local starters for each platform
+- `installers/` scripts to copy the right starter into a project
+- `docs/` quickstart, concepts, and platform guides
+- `smoke-tests/` post-install validation checklists
+
+## Design Principles
+
+- Shared core, thin platform adapters
+- Project-local workflow files over machine-bound private configs
+- Task-file driven nightly runs
+- High-risk Godot integration stays in the main session
+
+## Scope and Non-Goals
+
+This repository does not include:
+
+- private API endpoints
+- private auth files
+- machine-specific Godot paths
+- personal `.codex`, `.claude`, or other tool-home configuration
+- a playable game template or sample production project
+
+Those belong in each user's local environment or game repository.
+
+## Documentation
+
+- Quickstart: `docs/quickstart/`
+- Platform guides: `docs/platforms/`
+- Core concepts: `docs/concepts/`
+- Smoke tests: `smoke-tests/`
 
 ## Contributing
 
@@ -60,29 +102,4 @@ See `CONTRIBUTING.md` before opening a pull request.
 
 - `CODE_OF_CONDUCT.md`
 - `SECURITY.md`
-
-## Design Principles
-
-- Shared core, thin platform adapters
-- Project-local workflow files over machine-bound private configs
-- Task-file driven nightly runs
-- High-risk Godot integration stays in the main session
-
-## Repository Layout
-
-- `core/` shared roles and workflows
-- `templates/` project starters
-- `installers/` starter installation scripts
-- `docs/` quickstart and platform guidance
-- `smoke-tests/` post-install validation checklists
-
-## Scope
-
-This repository does not include:
-
-- private API endpoints
-- private auth files
-- machine-specific Godot paths
-- personal `.codex` or `.claude` home configuration
-
-Those belong in each user's local environment.
+- `LICENSE`
