@@ -14,6 +14,18 @@ Windows users can also double-click:
 installers\powershell\install-workflow.cmd
 ```
 
+macOS users can double-click:
+
+```text
+installers/bash/install-workflow.command
+```
+
+Linux users can run the interactive launcher:
+
+```bash
+./installers/bash/launch-install-workflow.sh
+```
+
 PowerShell example:
 
 ```powershell

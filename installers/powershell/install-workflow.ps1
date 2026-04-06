@@ -101,10 +101,49 @@ function Resolve-ProjectPath {
     }
 }
 
+function Resolve-OverwriteMode {
+    param(
+        [switch]$CliForce
+    )
+
+    if ($CliForce) {
+        return "overwrite"
+    }
+
+    if ($env:WORKFLOW_INSTALL_OVERWRITE) {
+        $envOverwrite = $env:WORKFLOW_INSTALL_OVERWRITE.Trim().ToLowerInvariant()
+
+        switch ($envOverwrite) {
+            { $_ -in @("overwrite", "force", "yes", "y", "true", "1") } { return "overwrite" }
+            { $_ -in @("skip", "no", "n", "false", "0") } { return "skip" }
+            default { throw "Invalid WORKFLOW_INSTALL_OVERWRITE value: $($env:WORKFLOW_INSTALL_OVERWRITE)" }
+        }
+    }
+
+    $canPrompt = [Environment]::UserInteractive -and -not [Console]::IsInputRedirected
+
+    if ($canPrompt -and ($Interactive -or (-not $PSBoundParameters.ContainsKey('Platform') -and -not $PSBoundParameters.ContainsKey('ProjectPath')))) {
+        while ($true) {
+            $selection = (Read-Host "Overwrite existing files when they already exist? [y/N]").Trim().ToLowerInvariant()
+
+            switch ($selection) {
+                "y" { return "overwrite" }
+                "yes" { return "overwrite" }
+                "" { return "skip" }
+                "n" { return "skip" }
+                "no" { return "skip" }
+            }
+        }
+    }
+
+    return "skip"
+}
+
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
 $repoRoot = Split-Path -Parent (Split-Path -Parent $scriptDir)
 $Platform = Resolve-Platform -RequestedPlatform $Platform
 $targetRoot = Resolve-ProjectPath -RequestedPath $ProjectPath
+$overwriteMode = Resolve-OverwriteMode -CliForce:$Force
 $templateRoot = Join-Path $repoRoot ("templates\" + $Platform + "-godot-project")
 $smokeTestPath = Join-Path $repoRoot ("smoke-tests\" + $Platform + "\README.zh-CN.md")
 
@@ -127,7 +166,7 @@ foreach ($file in $templateFiles) {
         New-Item -ItemType Directory -Force -Path $destinationDir | Out-Null
     }
 
-    if ((Test-Path -LiteralPath $destination) -and -not $Force) {
+    if ((Test-Path -LiteralPath $destination) -and $overwriteMode -ne "overwrite") {
         Write-Host "Skip existing file: $relativePath"
         continue
     }

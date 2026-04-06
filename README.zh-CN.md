@@ -48,6 +48,18 @@ Windows 双击安装入口：
 installers\powershell\install-workflow.cmd
 ```
 
+macOS 双击安装入口：
+
+```text
+installers/bash/install-workflow.command
+```
+
+Linux 或终端友好入口：
+
+```text
+./installers/bash/launch-install-workflow.sh
+```
+
 PowerShell 示例：
 
 ```powershell

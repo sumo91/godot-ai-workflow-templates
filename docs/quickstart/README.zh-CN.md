@@ -17,6 +17,18 @@ Windows 用户也可以直接双击：
 installers\powershell\install-workflow.cmd
 ```
 
+macOS 用户也可以双击：
+
+```text
+installers/bash/install-workflow.command
+```
+
+Linux 用户可以运行交互式启动脚本：
+
+```bash
+./installers/bash/launch-install-workflow.sh
+```
+
 PowerShell 示例：
 
 ```powershell
