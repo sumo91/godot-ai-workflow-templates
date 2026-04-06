@@ -3,7 +3,7 @@ set -euo pipefail
 
 script_dir="$(cd "$(dirname "$0")" && pwd)"
 repo_root="$(cd "$script_dir/../.." && pwd)"
-available_platforms="claude codex cursor trae"
+available_platforms="claude codex cursor trae opencode"
 
 print_usage() {
   echo "Usage: install-workflow.sh <platform> <project-path> [--force]"
@@ -15,7 +15,7 @@ normalize_lower() {
 
 platform_exists() {
   case "$1" in
-    claude|codex|cursor|trae) return 0 ;;
+    claude|codex|cursor|trae|opencode) return 0 ;;
     *) return 1 ;;
   esac
 }
@@ -50,6 +50,7 @@ resolve_platform() {
   echo "[2] codex"
   echo "[3] cursor"
   echo "[4] trae"
+  echo "[5] opencode"
 
   while true; do
     read -r -p "Enter the number or platform name: " selection
@@ -60,6 +61,7 @@ resolve_platform() {
       2) printf 'codex\n'; return ;;
       3) printf 'cursor\n'; return ;;
       4) printf 'trae\n'; return ;;
+      5) printf 'opencode\n'; return ;;
     esac
 
     if platform_exists "$selection"; then

@@ -7,7 +7,7 @@
 ## 3 步开始
 
 1. 选择平台：
-   `Claude` / `Codex` / `Cursor` / `Trae`
+   `Claude` / `Codex` / `Cursor` / `Trae` / `OpenCode`
 2. 运行安装脚本，把对应 starter 铺到你的项目目录
 3. 打开项目并执行对应平台的 smoke test
 

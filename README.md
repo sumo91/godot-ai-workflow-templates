@@ -2,7 +2,7 @@
 
 [中文 README](./README.zh-CN.md) | [Quickstart](./docs/quickstart/README.en.md)
 
-Reusable multi-agent workflow templates for Godot development across Claude Code, Codex, Cursor, and Trae.
+Reusable multi-agent workflow templates for Godot development across Claude Code, Codex, Cursor, Trae, and OpenCode.
 
 This repository helps you install a project-local AI workflow into your own Godot game project instead of relying on machine-bound personal setup.
 
@@ -35,10 +35,11 @@ Repository URL:
 | Codex | `templates/codex-godot-project` | `docs/platforms/codex.zh-CN.md` |
 | Cursor | `templates/cursor-godot-project` | `docs/platforms/cursor.zh-CN.md` |
 | Trae | `templates/trae-godot-project` | `docs/platforms/trae.zh-CN.md` |
+| OpenCode | `templates/opencode-godot-project` | `docs/platforms/opencode.zh-CN.md` |
 
 ## Quick Start
 
-1. Pick your platform: `claude`, `codex`, `cursor`, or `trae`
+1. Pick your platform: `claude`, `codex`, `cursor`, `trae`, or `opencode`
 2. Run the installer against your Godot project directory
 3. Open the project with your chosen tool
 4. Run the matching smoke test before real work

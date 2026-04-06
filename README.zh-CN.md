@@ -2,7 +2,7 @@
 
 [English README](./README.md) | [快速开始](./docs/quickstart/README.zh-CN.md)
 
-一套面向 Godot 开发的、多 Agent 协作工作流模板，支持 Claude Code、Codex、Cursor 和 Trae。
+一套面向 Godot 开发的、多 Agent 协作工作流模板，支持 Claude Code、Codex、Cursor、Trae 和 OpenCode。
 
 这个仓库的目标不是替你维护某台机器上的个人配置，而是把 AI 工作流安装到你自己的 Godot 项目里，让它能被分享、迁移和长期复用。
 
@@ -35,10 +35,11 @@
 | Codex | `templates/codex-godot-project` | `docs/platforms/codex.zh-CN.md` |
 | Cursor | `templates/cursor-godot-project` | `docs/platforms/cursor.zh-CN.md` |
 | Trae | `templates/trae-godot-project` | `docs/platforms/trae.zh-CN.md` |
+| OpenCode | `templates/opencode-godot-project` | `docs/platforms/opencode.zh-CN.md` |
 
 ## 3 步快速开始
 
-1. 选择平台：`claude`、`codex`、`cursor` 或 `trae`
+1. 选择平台：`claude`、`codex`、`cursor`、`trae` 或 `opencode`
 2. 运行安装脚本，把对应 starter 安装到你的 Godot 项目目录
 3. 用对应工具打开项目，并先执行匹配的 smoke test
 

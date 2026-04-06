@@ -8,6 +8,7 @@
 - `codex/README.zh-CN.md`
 - `cursor/README.zh-CN.md`
 - `trae/README.zh-CN.md`
+- `opencode/README.zh-CN.md`
 
 第一轮 smoke test 的目标不是测“能不能写完整功能”，而是测：
 

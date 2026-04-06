@@ -1,5 +1,5 @@
 param(
-    [ValidateSet("claude", "codex", "cursor", "trae")]
+    [ValidateSet("claude", "codex", "cursor", "trae", "opencode")]
     [string]$Platform,
 
     [string]$ProjectPath,
@@ -16,7 +16,7 @@ function Resolve-Platform {
         [string]$RequestedPlatform
     )
 
-    $availablePlatforms = @("claude", "codex", "cursor", "trae")
+    $availablePlatforms = @("claude", "codex", "cursor", "trae", "opencode")
 
     if ($RequestedPlatform) {
         return $RequestedPlatform.ToLowerInvariant()
@@ -56,7 +56,7 @@ function Resolve-Platform {
             return $selection
         }
 
-        Write-Host "Invalid selection. Choose 1-4 or a platform name."
+        Write-Host "Invalid selection. Choose 1-5 or a platform name."
     }
 }
 

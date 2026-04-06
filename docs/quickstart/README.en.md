@@ -4,7 +4,7 @@ This repository helps you install a reusable Godot multi-agent workflow into you
 
 ## Start In 3 Steps
 
-1. Pick a platform: `Claude`, `Codex`, `Cursor`, or `Trae`
+1. Pick a platform: `Claude`, `Codex`, `Cursor`, `Trae`, or `OpenCode`
 2. Run an installer to copy the matching starter into your project
 3. Open the project and run the platform smoke test
 
