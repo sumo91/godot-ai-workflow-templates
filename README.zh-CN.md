@@ -42,6 +42,12 @@
 2. 运行安装脚本，把对应 starter 安装到你的 Godot 项目目录
 3. 用对应工具打开项目，并先执行匹配的 smoke test
 
+Windows 双击安装入口：
+
+```text
+installers\powershell\install-workflow.cmd
+```
+
 PowerShell 示例：
 
 ```powershell

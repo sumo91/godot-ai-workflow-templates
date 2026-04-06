@@ -43,6 +43,12 @@ Repository URL:
 3. Open the project with your chosen tool
 4. Run the matching smoke test before real work
 
+Windows double-click option:
+
+```text
+installers\powershell\install-workflow.cmd
+```
+
 PowerShell example:
 
 ```powershell

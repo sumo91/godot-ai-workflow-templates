@@ -11,6 +11,12 @@
 2. 运行安装脚本，把对应 starter 铺到你的项目目录
 3. 打开项目并执行对应平台的 smoke test
 
+Windows 用户也可以直接双击：
+
+```text
+installers\powershell\install-workflow.cmd
+```
+
 PowerShell 示例：
 
 ```powershell

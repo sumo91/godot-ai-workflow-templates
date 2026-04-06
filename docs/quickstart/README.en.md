@@ -8,6 +8,12 @@ This repository helps you install a reusable Godot multi-agent workflow into you
 2. Run an installer to copy the matching starter into your project
 3. Open the project and run the platform smoke test
 
+Windows users can also double-click:
+
+```text
+installers\powershell\install-workflow.cmd
+```
+
 PowerShell example:
 
 ```powershell
