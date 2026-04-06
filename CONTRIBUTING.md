@@ -16,6 +16,8 @@ Keep this repository:
 - Do not add private API endpoints.
 - Do not add auth files or tokens.
 - Do not hardcode machine-specific Godot paths.
+- Follow `CODE_OF_CONDUCT.md` in all repository interactions.
+- Follow `SECURITY.md` when reporting or handling sensitive issues.
 - Prefer shared-core changes over duplicating the same rule in multiple platform templates.
 - Keep nightly workflows task-file driven.
 - Keep high-risk Godot integration in the main session guidance.

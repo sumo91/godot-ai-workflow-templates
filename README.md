@@ -52,6 +52,11 @@ Platform-specific guides:
 
 See `CONTRIBUTING.md` before opening a pull request.
 
+## Community
+
+- `CODE_OF_CONDUCT.md`
+- `SECURITY.md`
+
 ## Design Principles
 
 - Shared core, thin platform adapters
