@@ -1,4 +1,4 @@
-# AI Game Workflow Templates
+# Godot AI Workflow Templates
 
 Reusable multi-agent workflow templates for Godot game development across:
 
@@ -8,6 +8,10 @@ Reusable multi-agent workflow templates for Godot game development across:
 - Trae
 
 This repository is designed to be downloaded and applied to your own game project.
+
+Repository URL:
+
+- `https://github.com/sumo91/godot-ai-workflow-templates`
 
 ## What This Repository Contains
 
