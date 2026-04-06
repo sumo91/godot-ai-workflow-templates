@@ -79,6 +79,17 @@ For step-by-step setup:
 - English: `docs/quickstart/README.en.md`
 - Chinese: `docs/quickstart/README.zh-CN.md`
 
+## Recommended Local Enhancements
+
+This repository is designed to work as a project-local workflow starter by itself.
+
+However, for the strongest day-to-day experience, we recommend pairing it with:
+
+- `superpowers` for stronger workflow discipline, reusable skills, and role-driven execution
+- `godot-mcp` for deeper Godot-aware tooling and richer project/editor integration
+
+These are recommended local enhancements, not hard dependencies of this repository.
+
 ## Repository Layout
 
 - `core/` shared roles, prompts, and workflow logic
